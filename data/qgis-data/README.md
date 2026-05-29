@@ -1,5 +1,5 @@
 🗺️ Step 2: Spatial Layer Processing (QGIS)
-Power BI lacks local coordinate math architectures. Processing geographic features inside QGIS first provides the essential infrastructure proximity variables.
+Power BI lacks local coordinate math architectures. Processing geographic features inside QGIS first provides the essential infrastructure proximity variables. We compare the critical infrastructure to greenfield sites and compute distance.
 
 🛠️ Direct Procedural Instructions
 Initialize Your Environment: Open QGIS and create a blank workspace via Project -> New.

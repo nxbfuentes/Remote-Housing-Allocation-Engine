@@ -51,7 +51,7 @@ Business Context: Sourced external regional candidate points for potential new s
 Columns: Site_ID, Proposed_Region, Latitude, Longitude, Native_Title_Status (Approved vs. Pending).
 
 🗺️ Step 2: Spatial Layer Processing (QGIS)
-Power BI lacks local coordinate math architectures. Processing geographic features inside QGIS first provides the essential infrastructure proximity variables. We save the file spatial_greenfield_matrix.csv into qgis-data folder in the data folder.
+Power BI lacks local coordinate math architectures. Processing geographic features inside QGIS first provides the essential infrastructure proximity variables. We compare the critical infrastructure to greenfield sites and compute distance. We save the file spatial_greenfield_matrix.csv into qgis-data folder in the data folder.
 
 🏃‍♂️ Metric Scaling Script
 Because the EPSG:7844 matrix outputs distances as raw meters, run a quick script in data generation 'matrix-standardiser.py'  to convert the values to standard kilometers before modeling, making a new csv filed called spatial_greenfield_matrix_standard.csv. 
