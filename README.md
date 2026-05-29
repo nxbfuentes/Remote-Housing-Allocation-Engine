@@ -32,3 +32,20 @@ The framework introduces a Target Velocity Tracker. This allows executives to us
 
 🏁 Summary of Strategic Impact
 Ultimately, this project achieves evidence-based decision-making. It proves to a hiring panel that you understand public sector data isn't just about writing code—it’s about turning disparate, messy geospatial and structural data into an automated pipeline that puts "good homes" where they are needed most, ensuring optimal community outcomes under a highly constrained government budget.
+
+
+🏗️ Phase 1: Python Data Generation
+We will need a Python script to build two distinct, cross-referenced CSV files.
+📋 The Two Datasets We Are Creating:
+📋 Data Schema Design
+Dataset A: Internal Asset Ledger (internal_asset_ledger.csv)
+
+Business Context: Represents a 5,000-record snapshot of existing social housing assets across Western Australia.
+
+Columns: House_ID, Community_Name, Region (e.g., Kimberley, Pilbara, Goldfields), Current_Overcrowding_Index (scaled 1–10), Last_Refurbished_Date, Asset_Condition_Score.
+
+Dataset B: External Greenfield Opportunities (greenfield_base_points.csv)
+
+Business Context: Sourced external regional candidate points for potential new structural construction plots.
+
+Columns: Site_ID, Proposed_Region, Latitude, Longitude, Native_Title_Status (Approved vs. Pending).
