@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 from datetime import datetime, timedelta
+import os
 
 # Configuration & Random Seed Seed Initialization
 np.random.seed(42)
@@ -18,6 +19,7 @@ communities = {
     "Gascoyne": ["Carnarvon Reserve", "Burringurrah"],
 }
 
+os.makedirs("data", exist_ok=True)
 # --- 1. GENERATE DATASET A: INTERNAL ASSET LEDGER ---
 asset_data = []
 for i in range(1, record_count + 1):
@@ -44,7 +46,7 @@ for i in range(1, record_count + 1):
     )
 
 df_assets = pd.DataFrame(asset_data)
-df_assets.to_csv("internal_asset_ledger.csv", index=False)
+df_assets.to_csv("data/internal_asset_ledger.csv", index=False)
 
 # --- 2. GENERATE DATASET B: EXTERNAL GREENFIELD OPPORTUNITIES ---
 # Approximate bounding coordinate grids matching WA geographic bounds
@@ -75,7 +77,7 @@ for j in range(1, greenfield_count + 1):
     )
 
 df_greenfield = pd.DataFrame(greenfield_data)
-df_greenfield.to_csv("greenfield_base_points.csv", index=False)
+df_greenfield.to_csv("data/greenfield_base_points.csv", index=False)
 
 print("✨ Phase 1 Success: Data layers written to CSV workspace formats.")
-
+print("✨ Phase 1 Success: Data layers written to the 'data/' folder.")
