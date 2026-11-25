@@ -1,0 +1,21 @@
+
+# --- Safety net (25 Nov 2026): things that must never reach GitHub ---
+# Passwords, keys and connection settings belong in a local file git ignores, never in code
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+secrets.*
+credentials.*
+local_settings.*
+# Power BI files hold data; local databases and Office lock files are personal copies
+*.pbix
+*.duckdb
+*.duckdb.wal
+~$*
+# Python environments
+.venv/
+venv/
+__pycache__/
